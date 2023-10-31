@@ -1,0 +1,19 @@
+name: Project Board Automation
+
+on:
+  issues:
+    types:
+      - opened
+      - closed
+
+jobs:
+  move-card-to-project-board:
+    runs-on: windows-latest
+    steps:
+      - name: move issue to project board
+        uses: tibdex/github-project-automation-plus@v2
+        with:
+          project: 'My prject board'
+          column: 'To Do'
+        env:
+          GITHUB_TOKEN: ${{ secrerd.GITHUB_TOKEN }}
