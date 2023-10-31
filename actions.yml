@@ -13,7 +13,7 @@ jobs:
       - name: move issue to project board
         uses: tibdex/github-project-automation-plus@v2
         with:
-          project: 'My prject board'
+          project: 'My project board'
           column: 'To Do'
         env:
-          GITHUB_TOKEN: ${{ secrerd.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
